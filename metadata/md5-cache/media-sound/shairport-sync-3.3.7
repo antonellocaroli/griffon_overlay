@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install postinst
+DEPEND=dev-libs/libconfig openssl? ( dev-libs/openssl ) mbedtls? ( net-libs/mbedtls ) net-dns/avahi soxr? ( media-libs/soxr ) alsa? ( media-libs/alsa-lib ) alac? ( media-libs/libalac ) pulseaudio? ( media-sound/pulseaudio ) !systemd? ( dev-libs/libdaemon )
+DESCRIPTION=Shairport Sync is an AirPlay audio player
+EAPI=7
+HOMEPAGE=https://github.com/mikebrady/shairport-sync
+IUSE=alsa pulseaudio soxr systemd alac openssl mbedtls
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=dev-libs/libconfig openssl? ( dev-libs/openssl ) mbedtls? ( net-libs/mbedtls ) net-dns/avahi soxr? ( media-libs/soxr ) alsa? ( media-libs/alsa-lib ) alac? ( media-libs/libalac ) pulseaudio? ( media-sound/pulseaudio ) !systemd? ( dev-libs/libdaemon )
+REQUIRED_USE=|| ( alsa pulseaudio ) ^^ ( openssl mbedtls )
+SLOT=0
+SRC_URI=https://github.com/mikebrady/shairport-sync/archive/3.3.7.tar.gz -> shairport-sync-3.3.7.tar.gz
+_eclasses_=autotools	9988ecbe04129214297a7bbf3d253710	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=1ba8574da686517cc66b74961d29d499
